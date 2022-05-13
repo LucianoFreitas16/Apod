@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronomy picture of the day</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="index.js" defer></script>  
+   <title>Nasa pictures</title>
 </head>
 <body>
+  <div>
+    <h1>How was the sky this day?</h1>
+  </div>
+
+  <div class="pai">
+
+    <div id="imagem"></div>
     <div class="texto">
-        <h1> Astronomy picture of the day</h1>
-        <p>
- O Astronomy Picture of The Day (APOD – Imagem astronômica do Dia) é, na
- internet, o maior acervo de descrição de fotografias sobre astronomia.<br/>
- Nesse acervo encontramos fotos espaciais de todos os dias desde 1995!
-        </p>
+      <form class="forms" >
+        <label for="data" id="text">Insira uma data:</label>
+        <input type="date" id="data" min="1995-06-20">
+        <button id="botao">Pesquisar</button>
+      </form>
+      <div id="dados"></div>
+      <div id="div"></div>
+
     </div>
-    <div class="fotoNasa">
-        
-    </div>
-    <input type="date" name="date" id="date">
-    <br>
-    <button class="botao">Pesquisar</button>
     
+  </div>
+
 </body>
 </html>
