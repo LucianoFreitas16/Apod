@@ -1,5 +1,6 @@
 $("#botao").on("click", function (evento) {
   evento.preventDefault();
+
   const day = $("#data").val();
 
   $.ajax({
@@ -7,11 +8,14 @@ $("#botao").on("click", function (evento) {
     type: "GET",
     dataType: "json",
 
+
     success: function (result) {
+
   
       if (result.media_type == "image") {
         $("#imagem").html(`<img id='img' src="${result.url}"/>`);
         $("#dados").html(`${result.title}`);
+        
       } else if (result.media_type == "other") {
         $("#imagem").html(`<img id='img' src="./error.webp"/>`);
         $("#dados").html(`${result.title}`);
